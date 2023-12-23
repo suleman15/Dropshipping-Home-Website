@@ -1,0 +1,39 @@
+.AccordionItem {
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 20px;
+  width: 100%;
+  background-color: white;
+  font-family: poppins;
+}
+
+.AccordionHeader {
+  padding: 20px;
+  cursor: pointer;
+  transition: background-color 0.15s ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  & > *:nth-child(1) {
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 100%;
+    & > *:first-child {
+      color: dodgerblue;
+      font-size: 1.5rem;
+    }
+  }
+
+  &:hover {
+    background-color: #5c5c5c17;
+    color: dodgerblue;
+  }
+  &.active {
+    background-color: #33333309;
+  }
+}
+
+.AccordionPanel {
+  padding: 20px;
+}

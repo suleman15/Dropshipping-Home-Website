@@ -6,6 +6,9 @@ import SectionThree from "../Component/SectionThree";
 import SectionFour from "../Component/SectionFour";
 import SectionFive from "../Component/SectionFive";
 import SectionSix from "../Component/SectionSix";
+import SectionSeven from "../Component/SectionSeven";
+import SectionEight from "../Component/SectionEight";
+import SectionNine from "../Component/SectionNine";
 
 const Home = () => {
   return (
@@ -16,6 +19,9 @@ const Home = () => {
       <SectionFour />
       <SectionFive />
       <SectionSix />
+      <SectionSeven />
+      <SectionEight />
+      <SectionNine />
     </div>
   );
 };
