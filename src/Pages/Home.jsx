@@ -9,19 +9,27 @@ import SectionSix from "../Component/SectionSix";
 import SectionSeven from "../Component/SectionSeven";
 import SectionEight from "../Component/SectionEight";
 import SectionNine from "../Component/SectionNine";
+import SectionTen from "../Component/SectionTen";
+import Footer from "../Component/Footer";
+import Header from "../Component/Header";
+import SectionFiveTwo from "../Component/SectionFiveTwo";
 
 const Home = () => {
   return (
-    <div className=" max-w-[1680px] m-auto">
+    <div className=" max-w-[1680px] m-auto bg-hr bg-fixed">
+      <Header />
       <SectionOne />
       <SectionTwo />
       <SectionThree />
       <SectionFour />
       <SectionFive />
       <SectionSix />
+      <SectionFiveTwo />
       <SectionSeven />
       <SectionEight />
       <SectionNine />
+      <SectionTen />
+      <Footer />
     </div>
   );
 };

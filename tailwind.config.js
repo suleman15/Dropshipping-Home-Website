@@ -15,6 +15,9 @@ export default {
       fontFamily: {
         poppins: "Poppins, Open Sans",
       },
+      backgroundImage: {
+        hr: "url('./img/cta-bg.jpg')",
+      },
     },
   },
   plugins: [],

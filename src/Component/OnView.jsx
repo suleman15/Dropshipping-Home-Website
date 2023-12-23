@@ -12,9 +12,10 @@ const OnView = ({ children, css }) => {
   useEffect(() => {
     if (inView) {
       control.start("visible");
-    } else {
-      control.start("hidden");
     }
+    // else {
+    //   control.start("hidden");
+    // }
   }, [control, inView]);
   return (
     <motion.div
@@ -26,7 +27,7 @@ const OnView = ({ children, css }) => {
       initial={"hidden"}
       animate={control}
       transition={{ duration: 1 }}
-      className={css}
+      className={`${css}`}
     >
       {children}
     </motion.div>

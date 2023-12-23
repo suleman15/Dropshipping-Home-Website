@@ -46,7 +46,7 @@ const SectionSeven = () => {
         <div className=" grid grid-cols-1 lg:grid-cols-2 grid-rows-2  gap-7">
           <UpwardAnimate
             css={
-              "shadow-md w-full  flex items-center gap-3 bg-white rounded-lg p-6 w-full  max-w-[550px]"
+              "shadow-md  w-full   flex items-center gap-3 bg-white rounded-lg p-6 w-full  max-w-[650px]"
             }
           >
             <img
@@ -80,7 +80,7 @@ const SectionSeven = () => {
           </UpwardAnimate>
           <UpwardAnimate
             css={
-              "shadow-md w-full  flex items-center max-w-[550px] gap-3 bg-white rounded-lg p-6 w-full  max-w-[650px]"
+              "shadow-md  w-full   flex items-center max-w-[550px] gap-3 bg-white rounded-lg p-6 w-full  max-w-[650px]"
             }
           >
             <img
@@ -115,7 +115,7 @@ const SectionSeven = () => {
           </UpwardAnimate>
           <UpwardAnimate
             css={
-              "shadow-md w-full  flex items-center max-w-[550px] gap-3 bg-white rounded-lg p-6 w-full  max-w-[650px]"
+              "shadow-md  w-full   flex items-center max-w-[550px] gap-3 bg-white rounded-lg p-6 w-full  max-w-[650px]"
             }
           >
             <img
@@ -150,7 +150,7 @@ const SectionSeven = () => {
           </UpwardAnimate>
           <UpwardAnimate
             css={
-              " shadow-md w-full flex gap-3  max-w-[550px] bg-white rounded-lg p-6 w-full h-fit  max-w-[650px]"
+              " shadow-m d w-ful l flex gap-3  max-w-[550px] bg-white rounded-lg p-6 w-full h-fit  max-w-[650px]"
             }
           >
             <img

@@ -1,103 +1,215 @@
 import React from "react";
-
-const SectionThree = () => {
+import { useState } from "react";
+import { BiCommand } from "react-icons/bi";
+import {
+  BsBinoculars,
+  BsBoxSeam,
+  BsBrightnessHighFill,
+  BsEasel,
+  BsMap,
+} from "react-icons/bs";
+import OnView from "./OnView";
+const ListItem = ({ count, text }) => {
   return (
-    <div>
-      <ul
-        className="mb-5 flex list-none flex-row flex-wrap border-b-0 pl-0"
-        role="tablist"
-        data-te-nav-ref
-      >
-        <li role="presentation">
-          <a
-            href="#tabs-home"
-            className="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
-            data-te-toggle="pill"
-            data-te-target="#tabs-home"
-            data-te-nav-active
-            role="tab"
-            aria-controls="tabs-home"
-            aria-selected="true"
-          >
-            Home
-          </a>
-        </li>
-        <li role="presentation">
-          <a
-            href="#tabs-profile"
-            className="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
-            data-te-toggle="pill"
-            data-te-target="#tabs-profile"
-            role="tab"
-            aria-controls="tabs-profile"
-            aria-selected="false"
-          >
-            Profile
-          </a>
-        </li>
-        <li role="presentation">
-          <a
-            href="#tabs-messages"
-            className="my-2 block border-x-0 border-b-2 border-t-0 border-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-500 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent data-[te-nav-active]:border-primary data-[te-nav-active]:text-primary dark:text-neutral-400 dark:hover:bg-transparent dark:data-[te-nav-active]:border-primary-400 dark:data-[te-nav-active]:text-primary-400"
-            data-te-toggle="pill"
-            data-te-target="#tabs-messages"
-            role="tab"
-            aria-controls="tabs-messages"
-            aria-selected="false"
-          >
-            Messages
-          </a>
-        </li>
-        <li role="presentation">
-          <a
-            href="#tabs-contact"
-            className="disabled pointer-events-none my-2 block border-x-0 border-b-2 border-t-0 border-transparent bg-transparent px-7 pb-3.5 pt-4 text-xs font-medium uppercase leading-tight text-neutral-400 hover:isolate hover:border-transparent hover:bg-neutral-100 focus:isolate focus:border-transparent dark:text-neutral-600"
-            data-te-toggle="pill"
-            data-te-target="#tabs-contact"
-            role="tab"
-            aria-controls="tabs-contact"
-            aria-selected="false"
-          >
-            Contact
-          </a>
-        </li>
-      </ul>
+    <li className=" text-body-color dark:text-dark-6 flex text-sm">
+      <span className="bg-primary mr-2.5 flex h-[20px] text-sm w-full max-w-[20px] items-center justify-center rounded-full  text-white bg-[#37517E]">
+        {count}
+      </span>
+      {text}
+    </li>
+  );
+};
+const SectionThree = () => {
+  const [active, setActive] = useState("inventory");
 
-      <div className="mb-6">
-        <div
-          className="hidden opacity-100 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-          id="tabs-home"
-          role="tabpanel"
-          aria-labelledby="tabs-home-tab"
-          data-te-tab-active
-        >
-          Tab 1 content
+  const data = {
+    dashboard: {
+      title: "Dashboard",
+      content:
+        "Get a full overview of your eCommerce business in seconds. Preview all of your important store data all in one place.",
+      features: [
+        "Full account overview",
+        "Inventory status alerts",
+        "Sales trends",
+      ],
+      img: "./img/features-2.svg",
+    },
+    orders: {
+      title: "orders",
+      content:
+        "Our support team works around the clock to ensure that all of your orders are being processed in real time. Our Librex Go Dashboard supports seamless integrations with unlimited selling channels.",
+      img: "./img/features-2.svg",
+
+      features: [
+        " Same-day Order Processing",
+        "Real-time Order Reporting",
+        "Error-free Turn Around.",
+      ],
+    },
+    inventory: {
+      title: "Inventory",
+      content:
+        "Managing inventory can become really frustrating especially when you have multiple selling channels. Our in-house software takes all the stress off of having to keep track of your inventory.",
+      features: [
+        " Live Inventory Updates.",
+        "Manage and Transfer Inventory.",
+        "Inventory Lifecycle (Coming soon).",
+      ],
+      img: "./img/features-2.svg",
+    },
+    inbound: {
+      title: "inbound",
+      content:
+        "Send us containers, pallets or individual cartons, and our team will turn around all inbound shipments in less than 8 hours so you can simply start shipping your products the day they arrive.",
+      features: [
+        "Same Day Receiving.",
+        "Retail Storage Network keeps your inventory closest to your customers.",
+      ],
+      img: "./img/features-2.svg",
+    },
+    fba: {
+      title: "fba",
+      content:
+        "Keeping up with inventory restrictions from Amazon can be tedious. Whether it's an FBA prep or replenishment request, we will take care of it within 1 business day. Simply upload your labels to our software and we will take it from there.",
+      features: [
+        "Same Day Forwarding.",
+        "FBA Prep 2 Day Turnaround.",
+        "Custom Work Orders for Bundles and more.",
+      ],
+      img: "/img/features-2.svg",
+    },
+    b2b: {
+      title: "fba",
+      content:
+        "Through Eastern, you can seamlessly connect to retailers for EDI-automated wholesale and retail workflows, and print retailer-compliant packing slips. With an expansive set of retailers supported, Eastern provides:",
+      img: "./img/features-2.svg",
+
+      features: [
+        " Wholesale order fulfillment: inventory shipped to brick-and-mortar stores or distribution hubs.",
+        " Retailer dropshipping: orders placed on retailers websites and shipped directly to end consumers.",
+      ],
+    },
+  };
+
+  return (
+    <div className="bg-white">
+      <OnView css="flex flex-col justify-center p-5 bg-white">
+        <div className=" grid lg:grid-cols-6 grid-cols-3  justify-items-center p-5 gap-4 justify-center ">
+          <div
+            className={`group w-[150px] text-lg font-semibold h-[150px]  hover:bg-[#37517E] capitalize p-3 text-center hover:text-white flex flex-col justify-center items-center gap-3 ${
+              active == "dashboard"
+                ? `bg-[#37517E] [&>*:first-child]:text-white text-white`
+                : "bg-white"
+            }`}
+            htmlFor="dashboard"
+            onClick={(e) => {
+              setActive("dashboard");
+            }}
+          >
+            <BsBinoculars
+              className={`group-hover:text-white text-[royalblue] text-3xl`}
+            />
+            Dashboard
+          </div>
+          <div
+            className={`group w-[150px] text-lg font-semibold h-[150px]  hover:bg-[#37517E] capitalize p-3 text-center hover:text-white flex flex-col justify-center items-center gap-3 ${
+              active == "orders"
+                ? `bg-[#37517E] [&>*:first-child]:text-white text-white`
+                : "bg-white"
+            }`}
+            htmlFor="order"
+            onClick={(e) => {
+              setActive("orders");
+            }}
+          >
+            <BsBoxSeam
+              className={`group-hover:text-white text-[purple] text-3xl`}
+            />
+            Orders
+          </div>
+          <div
+            className={`group w-[150px] text-lg font-semibold h-[150px]  hover:bg-[#37517E] capitalize p-3 text-center hover:text-white flex flex-col justify-center items-center gap-3 ${
+              active == "inventory"
+                ? `bg-[#37517E] [&>*:first-child]:text-white text-white`
+                : "bg-white"
+            }`}
+            htmlFor="inventory"
+            onClick={(e) => {
+              setActive("inventory");
+            }}
+          >
+            <BsBrightnessHighFill
+              className={`group-hover:text-white text-[dodgerblue] text-3xl`}
+            />
+            inventory
+          </div>
+          <div
+            className={`group w-[150px] text-lg font-semibold h-[150px]  hover:bg-[#37517E] capitalize p-3 text-center hover:text-white flex flex-col justify-center items-center gap-3 ${
+              active == "inbound"
+                ? `bg-[#37517E] [&>*:first-child]:text-white text-white`
+                : "bg-white"
+            }`}
+            htmlFor="inbound"
+            onClick={(e) => {
+              setActive("inbound");
+            }}
+          >
+            <BiCommand
+              className={`group-hover:text-white text-[red] text-3xl`}
+            />
+            inbound shipment
+          </div>
+          <div
+            className={`group w-[150px] text-lg font-semibold h-[150px]  hover:bg-[#37517E] capitalize p-3 text-center hover:text-white flex flex-col justify-center items-center gap-3 ${
+              active == "fba"
+                ? `bg-[#37517E] [&>*:first-child]:text-white text-white`
+                : "bg-white"
+            }`}
+            htmlFor="fba"
+            onClick={(e) => {
+              setActive("fba");
+            }}
+          >
+            <BsEasel
+              className={`group-hover:text-white text-[blue] text-3xl`}
+            />
+            fBA Request
+          </div>
+          <div
+            className={`group w-[150px] text-lg font-semibold h-[150px]  hover:bg-[#37517E] capitalize p-3 text-center hover:text-white flex flex-col justify-center items-center gap-3 ${
+              active == "b2b"
+                ? `bg-[#37517E] [&>*:first-child]:text-white text-white`
+                : "bg-white"
+            }`}
+            htmlFor="b2b"
+            onClick={(e) => {
+              setActive("b2b");
+              console.log(e.target.querySelector(""));
+            }}
+          >
+            <BsMap
+              className={`group-hover:text-white text-[yellow] text-3xl`}
+            />
+            B2B Fulfillment
+          </div>
         </div>
-        <div
-          className="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-          id="tabs-profile"
-          role="tabpanel"
-          aria-labelledby="tabs-profile-tab"
-        >
-          Tab 2 content
+        <div className="w-full  relative flex  ">
+          <div className="w-full flex flex-col gap-3">
+            <h1 className="text-3xl text-[#37517E] font-bold capitalize">
+              {data[active].title}
+            </h1>
+            <div className="text-sm italic">{data[active].content}</div>
+            <ol className="space-y-3">
+              <div className="text-lg text-[#37517e]">FEATURES</div>
+
+              {data[active].features.map((item, index) => {
+                return <ListItem count={index + 1} text={item} />;
+              })}
+            </ol>
+          </div>
+          <img className={"w-[35%]"} src={data[active].img} alt="png" />
         </div>
-        <div
-          className="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-          id="tabs-messages"
-          role="tabpanel"
-          aria-labelledby="tabs-profile-tab"
-        >
-          Tab 3 content
-        </div>
-        <div
-          className="hidden opacity-0 transition-opacity duration-150 ease-linear data-[te-tab-active]:block"
-          id="tabs-contact"
-          role="tabpanel"
-          aria-labelledby="tabs-contact-tab"
-        >
-          Tab 4 content
-        </div>
-      </div>
+      </OnView>
     </div>
   );
 };
