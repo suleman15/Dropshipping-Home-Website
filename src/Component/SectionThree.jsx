@@ -11,7 +11,7 @@ import {
 import OnView from "./OnView";
 const ListItem = ({ count, text }) => {
   return (
-    <li className=" text-body-color dark:text-dark-6 flex text-sm">
+    <li className=" text-body-color dark:text-dark-6 flex text-sm font-poppins">
       <span className="bg-primary mr-2.5 flex h-[20px] text-sm w-full max-w-[20px] items-center justify-center rounded-full  text-white bg-[#37517E]">
         {count}
       </span>
@@ -32,7 +32,7 @@ const SectionThree = () => {
         "Inventory status alerts",
         "Sales trends",
       ],
-      img: "./img/features-2.svg",
+      img: "./img/features-1.svg",
     },
     orders: {
       title: "orders",
@@ -55,7 +55,7 @@ const SectionThree = () => {
         "Manage and Transfer Inventory.",
         "Inventory Lifecycle (Coming soon).",
       ],
-      img: "./img/features-2.svg",
+      img: "./img/features-3.svg",
     },
     inbound: {
       title: "inbound",
@@ -65,7 +65,7 @@ const SectionThree = () => {
         "Same Day Receiving.",
         "Retail Storage Network keeps your inventory closest to your customers.",
       ],
-      img: "./img/features-2.svg",
+      img: "./img/features-4.svg",
     },
     fba: {
       title: "fba",
@@ -76,13 +76,13 @@ const SectionThree = () => {
         "FBA Prep 2 Day Turnaround.",
         "Custom Work Orders for Bundles and more.",
       ],
-      img: "/img/features-2.svg",
+      img: "/img/features-5.svg",
     },
     b2b: {
       title: "fba",
       content:
         "Through Eastern, you can seamlessly connect to retailers for EDI-automated wholesale and retail workflows, and print retailer-compliant packing slips. With an expansive set of retailers supported, Eastern provides:",
-      img: "./img/features-2.svg",
+      img: "./img/features-6.svg",
 
       features: [
         " Wholesale order fulfillment: inventory shipped to brick-and-mortar stores or distribution hubs.",
@@ -188,16 +188,13 @@ const SectionThree = () => {
             }}
           >
             <BsMap
-              className={`group-hover:text-white text-[yellow] text-3xl`}
+              className={`group-hover:text-white text-[#aaaa28] text-3xl`}
             />
             B2B Fulfillment
           </div>
         </div>
         <div className="w-full  relative flex  ">
-          <div className="w-full flex flex-col gap-3">
-            <h1 className="text-3xl text-[#37517E] font-bold capitalize">
-              {data[active].title}
-            </h1>
+          <div className="w-full flex flex-col gap-3 px-10">
             <div className="text-sm italic">{data[active].content}</div>
             <ol className="space-y-3">
               <div className="text-lg text-[#37517e]">FEATURES</div>
@@ -207,7 +204,7 @@ const SectionThree = () => {
               })}
             </ol>
           </div>
-          <img className={"w-[35%]"} src={data[active].img} alt="png" />
+          <img className={"h-[300px]"} src={data[active].img} alt="png" />
         </div>
       </OnView>
     </div>

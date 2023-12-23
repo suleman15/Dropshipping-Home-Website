@@ -7,7 +7,7 @@ import UpwardAnimate from "./UpwardAnimate";
 
 const SectionFour = () => {
   return (
-    <div className="bg-[#F3F5FA]">
+    <div className="bg-[#F3F5FA] py-10">
       <OnView css="flex flex-col justify-center items-center p-5 gap-3 bg-[#F3F5FA]">
         <motion.div
           variants={{
@@ -16,10 +16,10 @@ const SectionFour = () => {
           }}
           initial={"hidden"}
           animate={"visible"}
-          transition={{ duration: 0.5 }}
-          className="text-[28px] uppercase text-[#37517E] font-bold border-b-2  py-3 border-b-[#33333333] relative before:content-[''] before:absolute before:w-[50px]  before:h-[3px] before:bg-[dodgerblue] before:left-[calc(50%-25px)] before:bottom-[-3px] before:z-10"
+          transition={{ duration: 1 }}
+          className="text-[28px] uppercase  font-bold text-[#37517E]   py-3  relative after:content-[''] after:absolute after:w-[100px]  after:h-[3px] after:bg-[#33333333] after:left-[calc(50%-50px)] after:bottom-[-3px] after:z-8 before:content-[''] before:absolute before:w-[50px]  before:h-[3px] before:bg-[dodgerblue] before:left-[calc(50%-25px)] before:bottom-[-3px] before:z-10"
         >
-          Services
+          SERVICES
         </motion.div>
         <motion.div
           variants={{
@@ -33,7 +33,7 @@ const SectionFour = () => {
         >
           We make it simple, and take care of the tough parts for you with:
         </motion.div>
-        <div className="grid gap-10 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
+        <div className="grid my-10 gap-10 lg:grid-cols-4 md:grid-cols-2 sm:grid-cols-1">
           <UpwardAnimate css="  bg-white rounded-lg hover:text-[dodgerblue] gap-3 p-3 w-[225px] h-[225px] text-[#333333] text-lg    flex flex-col justify-center items-center text-center">
             <BsTruckFlatbed className="text-3xl text-[dodgerblue]" />
             Same Day Shipping

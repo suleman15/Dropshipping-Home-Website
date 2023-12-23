@@ -51,7 +51,7 @@ export default () => {
       action="forms/contact.php"
       method="post"
       role="form"
-      className="font-poppins border-t-4 border-b-4  py-10 border-[dodgerblue]   overflow-hidden flex flex-col gap-3 lg:w-2/3 w-full"
+      className="font-poppins max-w-[700px] border-t-4 border-b-4  py-10 border-[dodgerblue]   overflow-hidden flex flex-col gap-3 lg:w-2/3 w-full"
     >
       <div className=" flex gap-4">
         <div className="w-full flex flex-col gap-2">
@@ -133,7 +133,7 @@ export default () => {
             fugiat sit in iste officiis commodi quidem hic quas.
           </motion.div>
         </div>
-        <div className="flex gap-3 p-10 w-full lg:flex-row flex-col">
+        <div className="flex gap-3 p-10 w-full lg:flex-row flex-col justify-center items-cen ">
           {ruf}
           {form}
         </div>

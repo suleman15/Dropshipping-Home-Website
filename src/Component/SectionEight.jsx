@@ -155,7 +155,7 @@ export default () => {
         </div>
         <Accordion>
           {data.map((_, i) => (
-            <OnView css={"w-full "}>
+            <OnView css={"w-[80%]"}>
               <AccordionItem key={i}>
                 <AccordionHeader>
                   <BsQuestionCircle />
