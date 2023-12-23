@@ -93,7 +93,7 @@ const SectionThree = () => {
 
   return (
     <div className="bg-white">
-      <OnView css="flex flex-col justify-center p-5 bg-white">
+      <OnView css="flex flex-col justify-center p-5 bg-white gap-5">
         <div className=" grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-1  justify-items-center p-5 gap-4 justify-center ">
           <div
             className={`group w-[150px] text-lg font-semibold h-[150px]  hover:bg-[#37517E] capitalize p-3 text-center hover:text-white flex flex-col justify-center items-center gap-3 ${
