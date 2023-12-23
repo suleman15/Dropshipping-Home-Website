@@ -16,7 +16,10 @@ import SectionFiveTwo from "../Component/SectionFiveTwo";
 
 const Home = () => {
   return (
-    <div className=" max-w-[1680px] m-auto bg-[url('./img/cta-bg.jpg')] bg-fixed">
+    <div
+      className=" max-w-[1680px] m-auto  bg-fixed"
+      style={{ backgroundImage: "url('./public/img/cta-bg.jpg')" }}
+    >
       <Header />
       <SectionOne />
       <SectionTwo />
