@@ -16,7 +16,7 @@ import SectionFiveTwo from "../Component/SectionFiveTwo";
 
 const Home = () => {
   return (
-    <div className=" max-w-[1680px] m-auto bg-hr bg-fixed">
+    <div className=" max-w-[1680px] m-auto bg-[url('./img/cta-bg.jpg')] bg-fixed">
       <Header />
       <SectionOne />
       <SectionTwo />
