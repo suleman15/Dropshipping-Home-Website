@@ -2,7 +2,7 @@ import React from "react";
 
 const SectionFiveTwo = () => {
   return (
-    <div className="flex justify-center text-white bg-[#000000a1] items-center p-[100px] gap-3 ">
+    <div className="flex flex-col lg:flex-row  justify-center text-white bg-[#000000a1] items-center p-10 lg:p-[100px] gap-3 ">
       <div className="flex flex-col gap-3">
         <h1 className="text-3xl text-white font-bold"> Call To Action</h1>
         <div>

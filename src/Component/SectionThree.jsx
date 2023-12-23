@@ -94,7 +94,7 @@ const SectionThree = () => {
   return (
     <div className="bg-white">
       <OnView css="flex flex-col justify-center p-5 bg-white">
-        <div className=" grid lg:grid-cols-6 grid-cols-3  justify-items-center p-5 gap-4 justify-center ">
+        <div className=" grid lg:grid-cols-6 md:grid-cols-3 sm:grid-cols-1  justify-items-center p-5 gap-4 justify-center ">
           <div
             className={`group w-[150px] text-lg font-semibold h-[150px]  hover:bg-[#37517E] capitalize p-3 text-center hover:text-white flex flex-col justify-center items-center gap-3 ${
               active == "dashboard"
@@ -193,7 +193,7 @@ const SectionThree = () => {
             B2B Fulfillment
           </div>
         </div>
-        <div className="w-full  relative flex  ">
+        <div className="w-full  relative flex lg:flex-row flex-col ">
           <div className="w-full flex flex-col gap-3 px-10">
             <div className="text-sm italic">{data[active].content}</div>
             <ol className="space-y-3">

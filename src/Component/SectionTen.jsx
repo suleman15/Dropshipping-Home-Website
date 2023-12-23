@@ -39,7 +39,7 @@ export default () => {
         <div>
           <form className="flex justify-center border-2 lg:flex-row flex-col md:rounded-none hover:border-[dodgerblue] text-white font-poppins overflow-hidden w-fit lg:rounded-full  mx-auto ">
             <input
-              className="w-[500px] p-3 focus:outline-none text-black"
+              className="w-full lg:w-[500px] p-3 focus:outline-none text-black"
               type="text"
               name="text"
               id="text"
