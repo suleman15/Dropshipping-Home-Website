@@ -37,14 +37,14 @@ export default () => {
           </motion.div>
         </div>
         <div>
-          <form className="flex justify-center border-2 hover:border-[dodgerblue] text-white font-poppins overflow-hidden w-fit rounded-full mx-auto ">
+          <form className="flex justify-center border-2 lg:flex-row flex-col md:rounded-none hover:border-[dodgerblue] text-white font-poppins overflow-hidden w-fit lg:rounded-full  mx-auto ">
             <input
-              className="w-[500px] p-3 focus:outline-none"
+              className="w-[500px] p-3 focus:outline-none text-black"
               type="text"
               name="text"
               id="text"
             />
-            <button className="p-3 bg-[dodgerblue] rounded-full  px-10 ">
+            <button className="p-3 bg-[dodgerblue] rounded-none lg:rounded-full  px-10 ">
               Subscribe
             </button>
           </form>
