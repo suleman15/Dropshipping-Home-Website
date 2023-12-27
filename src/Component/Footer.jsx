@@ -4,7 +4,7 @@ import { FaAngleRight } from "react-icons/fa6";
 
 const Footer = () => {
   return (
-    <div className="bg-white">
+    <div className="bg-white text-sm font-poppins ">
       <div className="grid lg:grid-cols-4 gap-3 p-10 w-full text-[gray] grid-cols-1">
         <div className="flex flex-col gap-3 text-sm ">
           <div className="text-[#37517E] text-2xl  font-semibold">EASTERN</div>
@@ -106,6 +106,12 @@ const Footer = () => {
               <BsLinkedin className="text-[#37517E]    " />
             </div>
           </div>
+        </div>
+      </div>
+      <div className="bg-[#37517E] text-white flex gap-3  justify-between p-8">
+        <div>© Copyright Shipment Hub. All Rights Reserved</div>
+        <div>
+          Designed by <b>Suleman Ahmed.</b>
         </div>
       </div>
     </div>
