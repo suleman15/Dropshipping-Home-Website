@@ -8,7 +8,7 @@ import { BsArrowRight, BsArrowRightShort } from "react-icons/bs";
 export default () => {
   return (
     <div className="bg-white">
-      <OnView className="flex flex-col justify-center items-center  text-[#37517E]  p-5 gap-3 ">
+      <OnView css="flex flex-col justify-center items-center  text-[#37517E]  p-5 gap-3 ">
         <div className="flex justify-center flex-col items-center p-5 gap-5 text-center">
           <motion.div
             variants={{
