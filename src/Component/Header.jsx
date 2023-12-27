@@ -3,9 +3,13 @@ import { BiDownArrow, BiMenu } from "react-icons/bi";
 const Header = () => {
   return (
     <header className=" z-40 flex  lg:flex-row flex-col     justify-evenly  px-10 fixed group z-10 w-full p-3 left-0 top-0 max-h-screen lg:overflow-visible overflow-auto  bg-[#37517ec0] text-white">
-      <div className="text-3xl flex justify-between w-full lg:w-auto  ">
+      <div className="text-3xl flex justify-between w-full lg:w-auto items-center ">
         <a href="/" className="logo">
-          ShipmentHub
+          <img
+            src="./logo-1.png"
+            alt="logo"
+            className="h-[30px] filter-[grayscale(300%)]"
+          />
         </a>
         <div
           className="lg:hidden block"
